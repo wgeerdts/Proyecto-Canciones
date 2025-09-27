@@ -10,4 +10,6 @@ import com.wgeerdts.canciones_db.modelos.Cancion;
 @Repository
 public interface RepositorioCanciones extends CrudRepository<Cancion, Long>{
    List<Cancion> findAll();
+
+   Cancion save(Cancion cancion);
 }
