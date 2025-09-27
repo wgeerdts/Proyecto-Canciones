@@ -14,11 +14,12 @@
       <ul>
          <c:forEach var="cancion" items="${listaCanciones}">
             <li>
-               ${cancion.titulo} - ${cancion.artista}
+               ${cancion.titulo} - ${cancion.artista.nombre} ${cancion.artista.apellido}
                <a href="<c:url value='/canciones/detalle/${cancion.id}'/>">Detalle</a>
             </li>
          </c:forEach>
       </ul>
-      <a href="<c:url value='/canciones/formulario/agregar'/>">Agregar Canción</a>
+      <a href="<c:url value='/canciones/formulario/agregar'/>">Agregar Canción</a> <br>
+      <a href="<c:url value='/artistas'/>">Ir a Artistas</a>
    </body>
 </html>
