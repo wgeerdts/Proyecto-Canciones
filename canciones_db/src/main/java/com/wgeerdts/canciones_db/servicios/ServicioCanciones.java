@@ -13,23 +13,27 @@ public class ServicioCanciones {
    @Autowired
    private final RepositorioCanciones repositorioCanciones;
 
-   public ServicioCanciones(RepositorioCanciones repositorioCanciones){
+   public ServicioCanciones(RepositorioCanciones repositorioCanciones) {
       this.repositorioCanciones = repositorioCanciones;
    }
 
-   public List<Cancion> obtenerTodasLasCanciones(){
+   public List<Cancion> obtenerTodasLasCanciones() {
       return this.repositorioCanciones.findAll();
    }
 
-   public Cancion obtenerCancionPorId(Long id){
+   public Cancion obtenerCancionPorId(Long id) {
       return this.repositorioCanciones.findById(id).orElse(null);
    }
 
-   public Cancion agregarCancion(Cancion nuevaCancion){
+   public Cancion agregarCancion(Cancion nuevaCancion) {
       return this.repositorioCanciones.save(nuevaCancion);
    }
 
-   public Cancion actualizaCancion(Cancion cancion){
+   public Cancion actualizaCancion(Cancion cancion) {
       return this.repositorioCanciones.save(cancion);
+   }
+
+   public void eliminarCancion(Long idCancion) {
+      this.repositorioCanciones.deleteById(idCancion);
    }
 }

@@ -19,6 +19,11 @@
       <a href="<c:url value='/canciones/formulario/editar/${idCancion}'/>">Editar canción</a>
       <br>
       <br>
+      <form action="/canciones/eliminar/${idCancion}" method="POST">
+         <input type="hidden" name="_method" value="DELETE" />
+         <button>Eliminar Canción</button>
+      </form>
+      <br>
       <a href="<c:url value='/canciones'/>">Volver a la lista de canciones</a>
    </body>
 </html>
