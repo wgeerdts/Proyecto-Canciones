@@ -38,7 +38,7 @@ public class Cancion {
    private String idioma;
 
    @Temporal(TemporalType.TIMESTAMP)
-   @Column(name = "fecha_creacion")
+   @Column(name = "fecha_creacion", updatable = false)
    private Date fechaCreacion;
 
    @Temporal(TemporalType.TIMESTAMP)

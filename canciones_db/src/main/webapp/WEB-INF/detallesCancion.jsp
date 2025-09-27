@@ -16,6 +16,8 @@
       <p><strong>Álbum:</strong> ${cancion.album}</p>
       <p><strong>Género:</strong> ${cancion.genero}</p>
       <p><strong>Idioma:</strong> ${cancion.idioma}</p>
+      <a href="<c:url value='/canciones/formulario/editar/${idCancion}'/>">Editar canción</a>
+      <br>
       <br>
       <a href="<c:url value='/canciones'/>">Volver a la lista de canciones</a>
    </body>
